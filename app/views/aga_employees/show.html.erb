@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @aga_employee.name %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @aga_employee.content %>
+</p>
+
+<%= link_to 'Edit', edit_aga_employee_path(@aga_employee) %> |
+<%= link_to 'Back', aga_employees_path %>

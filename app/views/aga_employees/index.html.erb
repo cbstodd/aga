@@ -1,0 +1,27 @@
+<h1>Listing aga_employees</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Content</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @aga_employees.each do |aga_employee| %>
+      <tr>
+        <td><%= aga_employee.name %></td>
+        <td><%= aga_employee.content %></td>
+        <td><%= link_to 'Show', aga_employee %></td>
+        <td><%= link_to 'Edit', edit_aga_employee_path(aga_employee) %></td>
+        <td><%= link_to 'Destroy', aga_employee, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Aga employee', new_aga_employee_path %>
