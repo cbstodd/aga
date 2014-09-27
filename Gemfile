@@ -32,6 +32,7 @@ gem 'rails_12factor', group: :production
 
 gem 'activeadmin', github: 'activeadmin'
 gem 'carrierwave'
+gem 'devise'
 
 
 # Use ActiveModel has_secure_password
