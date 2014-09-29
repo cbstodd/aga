@@ -1,1 +1,6 @@
 == AGA
+
+application location: frozen-lake-5534.herokuapp.com
+
+admin login: admin@example.com
+admin password: password
