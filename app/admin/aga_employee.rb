@@ -1,6 +1,5 @@
 ActiveAdmin.register AgaEmployee do
 
-
 index do
   column :name
   column :job_title
