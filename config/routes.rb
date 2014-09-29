@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   
   root 'admin/dashboard#index'
   
-  resources :aga_employees, path: ''
+  resources :aga_employees
   get 'aga_employees/:id' => redirect("/%{id}")
 
   devise_scope :admin_user do
