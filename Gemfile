@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 ruby '2.1.2'
 
 gem 'unicorn'
+gem 'puma'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.4'
@@ -32,7 +33,10 @@ gem 'rails_12factor', group: :production
 
 gem 'activeadmin', github: 'activeadmin'
 gem 'carrierwave'
+gem "mini_magick"
 gem 'devise'
+gem 'friendly_id'
+gem 'fog'
 
 
 # Use ActiveModel has_secure_password

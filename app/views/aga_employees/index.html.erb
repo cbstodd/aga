@@ -12,8 +12,12 @@
   <tbody>
     <% @aga_employees.each do |aga_employee| %>
       <tr>
+        <td><%= link_to "Admin Dashboard", login_path %></td>
         <td><%= aga_employee.name %></td>
-        <td><%= aga_employee.content %></td>
+        <td><%= aga_employee.job_title %></td>
+        <td><%= aga_employee.job_description %></td>
+        <td><%= aga_employee.phone_number %></td>
+        <td><%= image_tag aga_employee.image_url.to_s %></td>
         <td><%= link_to 'Show', aga_employee %></td>
         <td><%= link_to 'Edit', edit_aga_employee_path(aga_employee) %></td>
         <td><%= link_to 'Destroy', aga_employee, method: :delete, data: { confirm: 'Are you sure?' } %></td>

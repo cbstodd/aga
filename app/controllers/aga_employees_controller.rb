@@ -10,6 +10,7 @@ class AgaEmployeesController < ApplicationController
   # GET /aga_employees/1
   # GET /aga_employees/1.json
   def show
+    @aga_employee = AgaEmployee.find(params[:id])
   end
 
   # GET /aga_employees/new
@@ -56,7 +57,7 @@ class AgaEmployeesController < ApplicationController
   def destroy
     @aga_employee.destroy
     respond_to do |format|
-      format.html { redirect_to aga_employees_url, notice: 'Aga employee was successfully destroyed.' }
+      format.html { redirect_to @aga_employee, notice: 'Aga employee was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -64,11 +65,11 @@ class AgaEmployeesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_aga_employee
-      @aga_employee = AgaEmployee.find(params[:id])
+      @aga_employee = AgaEmployee.friendly.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def aga_employee_params
-      params.require(:aga_employee).permit(:name, :content)
+      params.require(:aga_employee).permit(:name, :job_title, :job_description, :phone_number, :image)
     end
 end

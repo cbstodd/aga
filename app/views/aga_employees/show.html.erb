@@ -2,12 +2,27 @@
 
 <p>
   <strong>Name:</strong>
-  <%= @aga_employee.name %>
+  <%= link_to @aga_employee.name %>
 </p>
 
 <p>
-  <strong>Content:</strong>
-  <%= @aga_employee.content %>
+  <strong>Job title:</strong>
+  <%= @aga_employee.job_title %>
+</p>
+
+<p>
+  <strong>Job description:</strong>
+  <%= @aga_employee.job_description %>
+</p>
+
+<p>
+  <strong>Phone number:</strong>
+  <%= @aga_employee.phone_number %>
+</p>
+
+<p>
+  <strong>Image</strong>
+  <%= image_tag @aga_employee.image_url.to_s %>
 </p>
 
 <%= link_to 'Edit', edit_aga_employee_path(@aga_employee) %> |

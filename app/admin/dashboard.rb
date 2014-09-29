@@ -12,8 +12,10 @@ ActiveAdmin.register_page "Dashboard" do
 
     # section "Recent Employees" do 
     #   table_for Aga_employee.order("released_at desc") do 
-    #     column :id
     #     column :name
+    #     column :job_title
+    #     column :job_description
+    #     column :image
     #     column :released_at
     #   end
     # end

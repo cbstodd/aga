@@ -2,9 +2,19 @@ Rails.application.routes.draw do
   
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  root 'aga_employees#index'
+  
+  root 'admin/dashboard#index'
+  
+  resources :aga_employees, path: ''
+  get 'aga_employees/:id' => redirect("/%{id}")
 
-  resources :aga_employees
+  devise_scope :admin_user do
+    get "/login", to: "active_admin/devise/sessions#new", via: :get
+    get "/directory", to: "admin/aga_employees#index", via: :get
+  end
+
+  # match "aga_employee/show", to: "aga_employees#show", via: :get
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
