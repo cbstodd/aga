@@ -22,7 +22,7 @@ end
       f.input :job_title
       f.input :job_description
       f.input :phone_number
-      f.input :image, as: :file
+      f.input :image
     end
     f.actions
   end
