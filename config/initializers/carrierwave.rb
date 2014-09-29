@@ -1,8 +1,8 @@
 CarrierWave.configure do |config|
   config.fog_credentials = {
     :provider               => 'AWS',                        # required
-    :aws_access_key_id      => 'xxx',                        # required
-    :aws_secret_access_key  => 'yyy',                        # required
+    :aws_access_key_id      => 'AWS_ACCESS_KEY_ID',                        # required
+    :aws_secret_access_key  => 'AWS_SECRET_ACCESS_KEY',                        # required
     :endpoint               => 'frozen-lake-5534.herokuapp.com' # optional, defaults to nil
   }
   config.fog_directory  = 'S3_BUCKET_NAME'                     # required
